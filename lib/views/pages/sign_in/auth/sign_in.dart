@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:state_management_getx/components/my_button.dart';
 import 'package:state_management_getx/controller/getx/sign_in.dart';
-import 'package:state_management_getx/views/pages/sign_in/widgets/my_email_field.dart';
-import 'package:state_management_getx/views/pages/sign_in/widgets/my_pass_field.dart';
+
+import 'widgets/my_email_field.dart';
+import 'widgets/my_pass_field.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -50,9 +51,10 @@ class SignIn extends StatelessWidget {
                         textName: "Login",
                         onTap: () {
                           if (!controller.formKey.currentState!.validate()) {
-                            return;
+                             return;
                           }
                           controller.getSignIn();
+
                         })
                     : const Center(
                         child: CircularProgressIndicator(
