@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:state_management_getx/views/pages/category/category.dart';
-import 'package:state_management_getx/views/pages/sign_in/auth/sign_in.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
