@@ -19,7 +19,7 @@ class _CategoryState extends State<Category> {
           children: [
             TextButton(onPressed: () {
               Get.back();
-            }, child: Text("Category Page In Show",style: TextStyle(fontSize: 30),))
+            }, child: const Text("Category Page In Show",style: TextStyle(fontSize: 30),))
           ],
         ),
       ),

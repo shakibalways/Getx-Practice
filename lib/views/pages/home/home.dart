@@ -94,15 +94,15 @@ class Home extends StatelessWidget {
                               onTap: (){
                                 Get.changeTheme(ThemeData.light());
                               },
-                              leading: Icon(Icons.light_mode),
-                              title: Text("Light Theme"),
+                              leading: const Icon(Icons.light_mode),
+                              title: const Text("Light Theme"),
                             ),
                             ListTile(
                               onTap: (){
                                 Get.changeTheme(ThemeData.dark());
                               },
-                              leading: Icon(Icons.dark_mode),
-                              title: Text("Dark Theme"),
+                              leading: const Icon(Icons.dark_mode),
+                              title: const Text("Dark Theme"),
                             ),
                           ],
                         ),
@@ -111,10 +111,10 @@ class Home extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 50,),
+              const SizedBox(height: 50,),
               TextButton(onPressed: (){
-                Get.to(Category());
-              }, child: Text("Throw a next page",style: TextStyle(
+                Get.to(const Category());
+              }, child: const Text("Throw a next page",style: TextStyle(
                 fontWeight: FontWeight.bold,fontSize: 25,
               ),))
             ],
