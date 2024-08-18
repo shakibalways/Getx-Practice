@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:state_management_getx/views/pages/category/category.dart';
 import 'package:state_management_getx/views/pages/sign_in/auth/sign_in.dart';
 
 class Home extends StatelessWidget {
@@ -109,7 +110,13 @@ class Home extends StatelessWidget {
                     );
                   },
                 ),
-              )
+              ),
+              SizedBox(height: 50,),
+              TextButton(onPressed: (){
+                Get.to(Category());
+              }, child: Text("Throw a next page",style: TextStyle(
+                fontWeight: FontWeight.bold,fontSize: 25,
+              ),))
             ],
           ),
         ),
