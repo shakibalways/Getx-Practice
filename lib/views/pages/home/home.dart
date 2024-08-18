@@ -87,13 +87,19 @@ class Home extends StatelessWidget {
                             borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20))),
-                        child: const Column(
+                        child:  Column(
                           children: [
                             ListTile(
+                              onTap: (){
+                                Get.changeTheme(ThemeData.light());
+                              },
                               leading: Icon(Icons.light_mode),
                               title: Text("Light Theme"),
                             ),
                             ListTile(
+                              onTap: (){
+                                Get.changeTheme(ThemeData.dark());
+                              },
                               leading: Icon(Icons.dark_mode),
                               title: Text("Dark Theme"),
                             ),
