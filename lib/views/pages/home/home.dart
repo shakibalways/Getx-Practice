@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:state_management_getx/views/pages/sign_in/auth/sign_in.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -20,21 +21,38 @@ class Home extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Get.defaultDialog(
-                    title: "Delete for chat",
-                    titlePadding: const EdgeInsets.only(top: 20),
-                    middleText: "Are you sure?",
-                    textConfirm: "Yes",
-                    confirmTextColor: Colors.white,
-                    cancelTextColor: Colors.blue,
-                    textCancel: "Cancel",
-                    barrierDismissible: false,
-                    contentPadding: const EdgeInsets.all(25),
-
-                    onConfirm: (){
-                      Get.back();
-                    }
-
-                  );
+                      title: "Delete for chat",
+                      titlePadding: const EdgeInsets.only(top: 20),
+                      // middleText: "Are you sure?",
+                      // textConfirm: "Yes",
+                      confirm: TextButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: const Text("Yes")),
+                      cancel: TextButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: const Text("Cancel")),
+                      content: const Column(
+                        children: [
+                          Text("ee"),
+                          Text("ee"),
+                          Text("ee"),
+                          Text("ee"),
+                          Text("ee"),
+                          Text("ee"),
+                        ],
+                      ),
+                      confirmTextColor: Colors.white,
+                      cancelTextColor: Colors.blue,
+                      // textCancel: "Cancel",
+                      barrierDismissible: false,
+                      contentPadding: const EdgeInsets.all(25),
+                      onConfirm: () {
+                        Get.back();
+                      });
                 },
                 child: Container(
                   height: 50,
@@ -53,6 +71,39 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 50,
+              ),
+              Container(
+                color: Colors.yellow,
+                child: ListTile(
+                  title: const Text("Light Theme"),
+                  subtitle: const Text("Getx Bottom Sheet"),
+                  onTap: () {
+                    Get.bottomSheet(
+                      Container(
+                        decoration: const BoxDecoration(
+                            color: Colors.orange,
+                            borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(20),
+                                topRight: Radius.circular(20))),
+                        child: const Column(
+                          children: [
+                            ListTile(
+                              leading: Icon(Icons.light_mode),
+                              title: Text("Light Theme"),
+                            ),
+                            ListTile(
+                              leading: Icon(Icons.dark_mode),
+                              title: Text("Dark Theme"),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              )
             ],
           ),
         ),
